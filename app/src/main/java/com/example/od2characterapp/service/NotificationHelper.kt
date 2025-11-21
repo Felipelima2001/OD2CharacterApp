@@ -30,7 +30,6 @@ object NotificationHelper {
             manager.createNotificationChannel(channel)
         }
     }
-
     fun buildForegroundNotification(context: Context) =
         NotificationCompat.Builder(context, CHANNEL_ID)
             .setContentTitle("Batalha em andamento")
