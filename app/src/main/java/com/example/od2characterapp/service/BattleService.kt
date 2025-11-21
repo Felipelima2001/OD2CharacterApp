@@ -30,6 +30,7 @@ class BattleService : Service() {
 
         scope.launch {
 
+
             val dao = App.database.personagemDao()
             var personagem = dao.findById(personagemId!!)
             var enemyHp = 20
