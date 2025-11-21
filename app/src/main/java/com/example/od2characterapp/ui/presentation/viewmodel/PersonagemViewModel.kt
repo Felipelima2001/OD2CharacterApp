@@ -29,9 +29,9 @@ class PersonagemViewModel(private val repo: PersonagemRepository) : ViewModel() 
         }
     }
 
-    fun deletePersonagem(entity: PersonagemEntity) {
+    fun deletePersonagem(personagem: PersonagemEntity) {
         viewModelScope.launch {
-            repo.delete(entity)
+            repo.delete(personagem)
         }
     }
 }

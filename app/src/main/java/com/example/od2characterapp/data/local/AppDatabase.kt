@@ -8,7 +8,7 @@ import com.example.od2characterapp.data.local.entity.PersonagemEntity
 // Aumente a versão para 2
 @Database(
     entities = [PersonagemEntity::class],
-    version = 2,
+    version = 3,
     exportSchema = false // Geralmente usado como false em desenvolvimento
 )
 abstract class AppDatabase : RoomDatabase() {

@@ -2,7 +2,7 @@ package com.example.od2characterapp.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.Embedded // IMPORTANTE: Anotação para embutir a AtributosEntity
+import androidx.room.Embedded
 
 @Entity(tableName = "personagens")
 data class PersonagemEntity(
@@ -12,7 +12,9 @@ data class PersonagemEntity(
     val raca: String,
     val classe: String,
 
-    // Inclui todos os campos de AtributosEntity nesta tabela
+
     @Embedded
-    val atributos: AtributosEntity
+    val atributos: AtributosEntity,
+
+    val currentHp: Int = 20
 )

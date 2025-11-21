@@ -15,4 +15,8 @@ class PersonagemRepository(private val dao: PersonagemDao) {
     suspend fun delete(personagem: PersonagemEntity) {
         dao.delete(personagem)
     }
+
+    suspend fun findById(id: Int) = dao.findById(id)
+
+    suspend fun updateHp(id: Int, hp: Int) = dao.updateHp(id, hp)
 }

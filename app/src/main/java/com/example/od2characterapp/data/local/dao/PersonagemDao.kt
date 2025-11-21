@@ -19,4 +19,10 @@ interface PersonagemDao {
 
     @Query("SELECT * FROM personagens")
     fun getAll(): Flow<List<PersonagemEntity>>
+
+    @Query("SELECT * FROM personagens WHERE id = :id LIMIT 1")
+    suspend fun findById(id: Int): PersonagemEntity
+
+    @Query("UPDATE personagens SET currentHp = :hp WHERE id = :id")
+    suspend fun updateHp(id: Int, hp: Int)
 }
